@@ -7,9 +7,9 @@ RUN apt-get update && apt-get install -y \
 
 RUN a2enmod rewrite
 
-COPY portfolio /var/www/html
+COPY projects/portfolio /var/www/html
 
-COPY portfolio/public/portfolio.db /var/www/html/portfolio.db
+COPY projects/portfolio/public/portfolio.db /var/www/html/portfolio.db
 
 RUN chmod 644 /var/www/html/portfolio.db && \
     chown www-data:www-data /var/www/html/portfolio.db
